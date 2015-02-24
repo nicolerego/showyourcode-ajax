@@ -7,6 +7,11 @@ class ProjectsController < ApplicationController
     else
       Project.all
     end
+
+    if request.xhr?
+      render @projects
+    end 
+
   end
 
   def show
