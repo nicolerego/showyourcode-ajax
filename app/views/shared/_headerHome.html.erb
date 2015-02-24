@@ -1,0 +1,15 @@
+<header class="home">
+<h1><%= link_to image_tag("newLogo.png", alt: "Logo"), "/" %></h1>
+<section class="loginSignup">
+ 	<p class="userinfo">
+      <% if current_user %>
+        Signed in as <%= current_user.name %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
+    </p>
+    <p class="loginSignup">
+      <% else %>
+        <%= link_to "LOGIN", new_session_path, class: "flatButton" %>  <%= link_to "SIGNUP", new_user_path, class: "flatButton" %>
+      <% end %>
+    </p>
+</div>
+</section>
+</header>

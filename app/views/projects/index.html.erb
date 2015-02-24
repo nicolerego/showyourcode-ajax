@@ -1,0 +1,12 @@
+<%= render "/shared/header" %>
+
+<ul class="projects">
+	<% @projects.each do |project| %>
+<li>
+	<%= link_to project.name, project_path(project) %></br> 
+	<%= project.description %> </br>
+	<%= project.link %>
+</li>
+	<% end %>
+</ul>
+<%= render "shared/footer"%>

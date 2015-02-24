@@ -1,0 +1,29 @@
+<%= render "/shared/header" %>
+<section class="projectPage">
+
+<% if @project.owner == current_user %>
+| <%= link_to "Edit", edit_project_path(@project) %>
+| <%= link_to "Delete", @project, method: :delete, data: 
+	{confirm: "Are you sure you want to delete this project?"}  %>
+<% end %>
+
+<section class="project">
+<h3><%= @project.name %></h3>
+<p>Name: <%= @project.name %> </br> 
+	Description: <%= @project.description %> </br>
+	Link: <%= @project.link %> </br>
+	Created by: <%= @project.owner.name %></p> 
+</section>
+ <section class="reviews">
+ <h3 class="reviewsTitle">Reviews for <%= @project.name %></h3>
+  <%= render '/reviews/displayReviews'%>
+</section>
+ <% if current_user %>
+  <%= render '/reviews/newReviewForm'%>
+
+<% else %>
+  <p>You must be <%= link_to "logged in", new_session_path %> to add a comment.</p> 
+  <% end %>
+</section>
+
+  <%= render "/shared/footer" %>

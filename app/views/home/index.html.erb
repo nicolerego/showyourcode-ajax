@@ -1,0 +1,27 @@
+<%= render "shared/headerHome" %>
+<div class="app_description">
+	
+	<p>First things, first. </br>Write some really awesome code. </br>
+		Then share it with your fellow developers and beer enthusiasts for review.
+	</p></br>
+	<p class="homeRecent"> Check out some recent projects!</p>
+
+</div>
+
+<section class= "recentProjects">
+<div class="arrow-down"></div>
+<ul class="projects">
+	<% @projects.each do |project| %>
+<li>
+	<%= link_to project.name, project_path(project) %></br>
+	<%= project.description %> </br>
+</li>
+	<% end %>
+</ul>
+
+<div class="flatButton">
+ <%= link_to "View all Projects",  projects_url %>
+</div>
+</section>
+
+<%= render "shared/footer"%>
