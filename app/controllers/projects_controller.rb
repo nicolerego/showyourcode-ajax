@@ -8,8 +8,13 @@ class ProjectsController < ApplicationController
       Project.all
     end
 
-    if request.xhr?
-      render @projects
+    respond_to do |format|
+      format.html do 
+          if request.xhr?
+             render @projects
+          end 
+      end 
+      format.js
     end 
 
   end
