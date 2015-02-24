@@ -2,7 +2,11 @@ class ProjectsController < ApplicationController
   before_filter :ensure_logged_in, only: [:create, :destroy, :edit, :update]
 
   def index
-  	@projects = Project.all
+    @projects = if params[:search]
+      Project.where("LOWER(name) LIKE LOWER(?)", "%#{params[:search]}%")
+    else
+      Project.all
+    end
   end
 
   def show

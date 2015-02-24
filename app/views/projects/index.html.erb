@@ -1,12 +1,12 @@
 <%= render "/shared/header" %>
 
+<%= form_tag projects_path, method: :get, authentication: false, id: 'search-form' do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search" %>
+<% end %>
+
 <ul class="projects">
-	<% @projects.each do |project| %>
-<li>
-	<%= link_to project.name, project_path(project) %></br> 
-	<%= project.description %> </br>
-	<%= project.link %>
-</li>
-	<% end %>
+	<%= render "project"%>
 </ul>
+
 <%= render "shared/footer"%>
