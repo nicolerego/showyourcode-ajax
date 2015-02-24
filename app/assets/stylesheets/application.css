@@ -117,6 +117,19 @@ h1 img {max-width:600px;}
 
 ul li {list-style-type: none;}
 
+#search-form { text-align: center; }
+
+input#search {
+	height:26px;
+	max-width: 300px;
+}
+
+input.flatButton {
+	padding-top:0px; 
+	outline:none;
+	width:130px;
+}
+
 ul.projects {
 	height:100%;
 	overflow: auto;
@@ -225,22 +238,6 @@ h4 {
 	padding:10px;
 }
 
-/*.footer .loginSignup{
-	width:300px;
-	margin:0 auto;
-	display: inline-block;
-	vertical-align: top;
-	margin-top: -30px;
-}*/
-/*
-.footer .getStarted {
-	width:200px;
-	margin:0 auto;
-	display: inline-block;
-	margin-top:-200px !important;
-	margin-top: 0px;
-}*/
-
 .flatButton {
   position: relative;
   vertical-align: top;
@@ -267,12 +264,14 @@ h4 {
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+  outline:none;
 }
 
 .flatButton a{
 	text-decoration: none;
 	color:#fff;
 }
+
 
 .madeWith {
 	font-size: 9pt;
