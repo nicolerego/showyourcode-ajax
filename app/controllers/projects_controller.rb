@@ -6,8 +6,8 @@ class ProjectsController < ApplicationController
       Project.where("LOWER(name) LIKE LOWER(?)", "%#{params[:search]}%")
     else
       # Project.all
-      Project.order('projects.created_at DESC').page(params[:page])
-    end
+      Project.order('projects.created_at DESC')
+    end.page(params[:page])
 
     respond_to do |format|
       format.html do 

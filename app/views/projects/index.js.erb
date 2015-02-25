@@ -1,1 +1,8 @@
-$('.projects').html("<%= j(render @projects) %>");
+<% if params[:search] && params[:page].nil? %>
+	$('.projects').html("<%= j(render @projects) %>");
+<% else %>
+	$('.projects').append("<%= j(render @projects) %>");
+<% end %>
+
+$('.pagination').replaceWith("<%= j(paginate @projects) %>");
+
