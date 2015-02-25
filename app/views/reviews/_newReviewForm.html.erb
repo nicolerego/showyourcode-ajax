@@ -1,7 +1,7 @@
 <section class="formPage">
 <h5>WRITE A NEW COMMENT</h5>
 
-  <%= form_for([@project, @review]) do |f| %>
+  <%= form_for [@project, @review], remote: true do |f| %>
     <% if @review.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@review.errors.count, "error") %> prohibited this comment from being saved:</h2>

@@ -18,11 +18,16 @@ class ReviewsController < ApplicationController
   	@review = @project.reviews.build(review_params)
   	@review.user = current_user
 
-  	if @review.save
-  		redirect_to project_path(@project), notice: "Comment was successfully added"
-  	else
-  		render 'projects/show'
-  	end 
+    respond_to do |format|
+      if @review.save
+        format.html { redirect_to project_path(@product.id), notice: 'Comment added.' }
+        format.js {} 
+      else
+        format.html { render 'projects/show', alert: 'There was an error.'  }
+        format.js {} 
+      end
+    end    
+  
   end
 
   def update
