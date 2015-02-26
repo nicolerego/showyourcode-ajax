@@ -102,6 +102,10 @@ h1 img {max-width:600px;}
 	font-weight: 300;
 }
 
+p.userinfo {
+	color: #fff;
+}
+
 .app_description {
 	height:100%;
 	overflow: auto;
