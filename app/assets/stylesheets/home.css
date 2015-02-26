@@ -1,0 +1,79 @@
+/*============== HOMEPAGE STYLING*/
+header.home {
+	background: url("backGround.jpg");
+	background-size: cover;
+	padding-top:80px;
+	padding-bottom:150px;
+	text-align: center;
+}
+
+h1 img {max-width:600px;}
+
+nav {
+	height:60px;
+	overflow: auto;
+	width:350px;
+	margin: 0 auto;
+	margin-top: -30px;
+}
+
+.inApp img { width:400px; }
+
+.inApp {
+	height:100%;
+	overflow: auto;
+	text-align: center;
+	padding-bottom:40px;
+}
+
+.inApp ul li {
+	float:left;
+	margin-right:20px;
+	padding:10px;
+	margin-top:0px;
+	border-bottom:solid 1px #222222;
+	border-top:solid 1px #222222;
+}
+
+.inApp a, a:visited {
+	text-decoration: none;
+	text-transform: uppercase;
+	color:#222222;
+}
+
+p.userinfo { color: #fff; }
+
+.app_description {
+	height:100%;
+	overflow: auto;
+	padding-left:60px;
+	padding-right:60px;
+	max-width:600px;
+	margin: 0 auto;
+	margin-top:130px;
+	margin-bottom: 80px;
+	text-align: center;
+	font-size: 160%;
+}
+
+
+.homeRecent {
+	font-size: 16pt;
+	margin-bottom: 0px;
+}
+
+.recentProjects {
+	padding-top: 50px;
+	padding-bottom: 80px;
+	background-color: #FCFCFC;
+}
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-top: 40px solid #fff;
+	margin:0 auto;
+	margin-top:-60px;
+}

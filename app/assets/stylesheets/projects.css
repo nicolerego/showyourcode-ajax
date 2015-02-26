@@ -1,0 +1,86 @@
+/*============== PROJECTS INDEX STYLING*/
+h3.singleTitle {
+	height: 60px;
+	margin-top: 0px;
+	width: 150px;
+	text-align: center;
+	padding-top: 45px;
+	background: #f1b601; 
+	color: #fff;
+}
+
+#search-form { text-align: center; }
+
+input#search {
+	height:26px;
+	max-width: 300px;
+}
+
+input.flatButton {
+	padding-top:0px; 
+	outline:none;
+	width:130px;
+}
+
+/*============== PROJECT PAGE STYLING*/
+.projectPage {
+	width:80%;
+	margin: 0 auto;
+	height:100%;
+	overflow:auto;
+	margin-bottom: 100px;
+}
+
+.projectPage h3 {
+	text-transform: uppercase;
+	font-weight: 300;
+	height:80px;
+	float:left; 
+	margin-right:20px;
+}
+
+.projectPage a {
+	text-decoration: none;
+	color:#222;
+	text-transform: lowercase;
+}
+
+.project { 
+	margin-bottom:20px;
+	margin-top:20px;
+}
+
+.projectPage .formPage {
+	text-align: left;
+	width:100%;
+}
+
+.projectPage .formPage textarea {
+	width:99%; 
+	height:50px; 
+	margin-top:10px;
+}
+
+.projectPage a:hover {color:#ccc;}
+
+/*============== REVIEWS STYLING*/
+.reviews {
+	height:100%; 
+	overflow:auto;
+	clear: both;
+	float:none;
+}
+
+.reviews img {
+	height:25px;
+	vertical-align: text-top;
+	margin-bottom: 0px;
+	float:left; 
+	margin-right:10px;
+}
+
+.reviewsTitle {
+	margin-bottom:-20px;
+	width:100%;
+	overflow-y:hidden;
+}

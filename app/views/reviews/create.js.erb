@@ -1,4 +1,4 @@
-$('#review-list').html("<%= j(render(:partial => 'displayReviews')) %>");
+$('#review-list').append("<%= j(render(:partial => 'displayReviews')) %>");
 
 <% if @review.errors.present? %>
 	$('#review-form-errors').html("<%= j(render(:partial => 'reviewFormErrors'))%>");
@@ -7,3 +7,12 @@ $('#review-list').html("<%= j(render(:partial => 'displayReviews')) %>");
 	$('#review-list').html("<%= j(render(:partial => 'displayReviews'))%>");
 	$('#new_review')[0].reset();
 <% end %>
+
+
+// Stretch Assignments
+
+// Instead of refreshing the entire list of reviews via AJAX, 
+// append the new review to the end of the list
+// Highlight the newly added review and have the browser scroll to it
+// Refresh the review list without using a view template 
+// (app/views/reviews/create.js.erb)

@@ -8,11 +8,11 @@
 	<% end %>
 
 	<section class="project">
-	<h3><%= @project.name %></h3>
+	<h3 class ="singleTitle"><%= @project.name %></h3>
 	<p>Name: <%= @project.name %> </br> 
 		Description: <%= @project.description %> </br>
-		Link: <%= @project.link %> </br>
-		Created by: </p> 
+		Link: <a href="<%= @project.link %>"><%= @project.link %></a> </br>
+		Created by: <%= @project.owner.name %></p> 
 	</section>
 
 	<section class="reviews">

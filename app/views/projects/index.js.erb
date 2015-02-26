@@ -3,6 +3,5 @@
 <% else %>
 	$('.projects').append("<%= j(render @projects) %>");
 <% end %>
-
 $('.pagination').replaceWith("<%= j(paginate @projects) %>");
 

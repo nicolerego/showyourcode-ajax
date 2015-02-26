@@ -14,6 +14,7 @@
  *= require_self
  */
 
+/*============== GENERAL/SHARED STYLING*/
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 
 body {
@@ -22,54 +23,14 @@ body {
 	margin:0 auto;
 }
 
-header.home {
-	/*background-color: #acf042;*/
-	background: url("backGround.jpg");
-	background-size: cover;
-	padding-top:80px;
-	padding-bottom:150px;
-	text-align: center;
-}
-
-header.home h3 {
-	font-weight: 200; 
-	color:#fff;
-}
-
-.inApp {
-	
-	height:100%;
-	overflow: auto;
-	text-align: center;
-	padding-bottom:40px;
-}
-
-.inApp img {
-	width:400px;
-
-}
-
-nav {
-	height:100%;
-	overflow: auto;
-	width:410px;
+h1 {
+	width:80%;
+	max-width:600px;
 	margin: 0 auto;
-	margin-top: -30px;
-}
-
-.inApp ul li {
-	float:left;
-	margin-right:20px;
-}
-
-.inApp a {
-	text-decoration: none;
-	/*color:#f1b601;*/
+	text-align: center;
+	padding:15px;
+	letter-spacing: 5px;
 	text-transform: uppercase;
-}
-header h3.pages { 
-	font-weight: 200; 
-	margin-top: -20px;
 }
 
 h1 a {
@@ -80,59 +41,29 @@ h1 a {
 	text-align: center;
 }
 
-h1 {
-	/*border:solid 1px #fff;*/
-	width:80%;
-	max-width:600px;
-	margin: 0 auto;
-	text-align: center;
-	padding:15px;
-	letter-spacing: 5px;
+header h3.pages { 
+	font-weight: 200; 
+	margin-top: -20px;
+}
+
+h4 {
 	text-transform: uppercase;
-}
-
-h1 img {max-width:600px;}
-
-.loginSignup a {
-	padding:5px 7px;
-	margin-right:5px;
-	background-color: orange;
-	text-decoration: none;
-	color: #fff;
+	font-size:120%;
 	font-weight: 300;
+	border: solid 1px #000;
+	width:160px;
+	padding:10px;
 }
 
-p.userinfo {
-	color: #fff;
+h5 { font-weight: 100; }
+
+.inApp p.userinfo {
+	color: #222222;
+	text-align: right;
+	margin-right: 40px;
 }
 
-.app_description {
-	height:100%;
-	overflow: auto;
-	padding-left:60px;
-	padding-right:60px;
-	max-width:600px;
-	margin: 0 auto;
-	margin-top:130px;
-	margin-bottom: 80px;
-	text-align: center;
-	font-size: 160%;
-}
-
-ul li {list-style-type: none;}
-
-#search-form { text-align: center; }
-
-input#search {
-	height:26px;
-	max-width: 300px;
-}
-
-input.flatButton {
-	padding-top:0px; 
-	outline:none;
-	width:130px;
-}
+ul li { list-style-type: none; }
 
 ul.projects {
 	height:100%;
@@ -198,50 +129,6 @@ ul.projects li a:focus::after {
 	transform: translateX(0px);
 }
 
-
-.homeRecent {
-	font-size: 16pt;
-	margin-bottom: 0px;
-}
-
-.recentProjects {
-	padding-top: 50px;
-	padding-bottom: 80px;
-	background-color: #FCFCFC;
-}
-
-.arrow-down {
-	width: 0; 
-	height: 0; 
-	border-left: 40px solid transparent;
-	border-right: 40px solid transparent;
-	border-top: 40px solid #fff;
-	margin:0 auto;
-	margin-top:-60px;
-
-}
-
-.footer {
-	text-align: center;
-	width:100%;
-	margin:0 auto;
-	margin-top:0px;
-	height: 5px;
-	height: 100%;
-	overflow: auto;
-	background-color: #270346;
-	color: #fff;
-}
-
-h4 {
-	text-transform: uppercase;
-	font-size:120%;
-	font-weight: 300;
-	border: solid 1px #000;
-	width:160px;
-	padding:10px;
-}
-
 .flatButton {
   position: relative;
   vertical-align: top;
@@ -273,14 +160,22 @@ h4 {
 
 .flatButton a{
 	text-decoration: none;
-	color:#fff;
+	color:#fff !important;
 }
 
-
-.madeWith {
-	font-size: 9pt;
-	
+.footer {
+	text-align: center;
+	width:100%;
+	margin:0 auto;
+	margin-top:0px;
+	height: 5px;
+	height: 100%;
+	overflow: auto;
+	background-color: #270346;
+	color: #fff;
 }
+
+.madeWith { font-size: 9pt; }
 
 .madeWith img {
 	vertical-align: text-top;
@@ -288,6 +183,7 @@ h4 {
 	height:15px;
 	margin-left: 3px;
 }
+
 
 .formPage {
 	width:80%;
@@ -312,9 +208,7 @@ h4 {
 	color: grey;
 }
 
-.formPage label {
-	font-size: 11pt;
-}
+.formPage label { font-size: 11pt; }
 
 input, textarea {
 	width:50%;
@@ -334,64 +228,29 @@ input, textarea {
 	margin-left:-20px;
 }
 
-.projectPage {
-	width:80%;
-	margin: 0 auto;
-	height:100%;
-	overflow:auto;
-	margin-bottom: 100px;
-}
-
-.projectPage h3 {
-	text-transform: uppercase;
-	font-weight: 300;
-	height:80px;
-	float:left; 
-	margin-right:20px;
-}
-
-.projectPage a {
+/*============== SIGNUP/LOGIN STYLING*/
+.loginSignup a {
+	padding:5px 7px;
+	margin-right:5px;
+	background-color: orange;
 	text-decoration: none;
-	color:#222;
-	text-transform: uppercase;
+	color: #fff;
+	font-weight: 300;
 }
 
-.project { 
-	margin-bottom:20px;
-	margin-top:20px;
-}
-.reviews {
-	height:100%; 
-	overflow:auto;
-	clear: both;
-	float:none;
+/*============== MEDIA QUERIES*/
+@media screen and (max-width: 960px) {
+    ul.projects li {
+    	width:40%;
+    	margin-right:10%;
+    }
 }
 
-.reviews img {
-	height:25px;
-	vertical-align: text-top;
-	margin-bottom: 0px;
-	float:left; 
-	margin-right:10px;}
-
-h5 { font-weight: 100; }
-
-.projectPage .formPage {
-	text-align: left;
-	width:100%;
+@media screen and (max-width: 736px) {
+	h1 img { max-width: 400px; }
 }
 
-.projectPage .formPage textarea {
-	width:99%; 
-	height:50px; 
-	margin-top:10px;
-}
-
-.projectPage a:hover {color:#ccc;}
-.projectPage .formPage .flatButton {}
-
-.reviewsTitle {
-	margin-bottom:-20px;
-	width:100%;
-	overflow-y:hidden;
+@media screen and (max-width: 500px) {
+	ul.projects li { width:100%; }
+    h1 img { max-width: 320px; }
 }

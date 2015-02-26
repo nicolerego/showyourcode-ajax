@@ -10,11 +10,7 @@ class ProjectsController < ApplicationController
     end.page(params[:page])
 
     respond_to do |format|
-      format.html do 
-          if request.xhr?
-             render @projects
-          end 
-      end 
+      format.html 
       format.js
     end 
 

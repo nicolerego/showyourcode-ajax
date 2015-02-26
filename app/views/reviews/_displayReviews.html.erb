@@ -5,7 +5,7 @@
 		</br>
 		<% if review.user != nil %>
 			<em> by <%= review.user.name %></em>
-			Added on: <%= review.created_at %></br></br>
+			 on <%= review.created_at.strftime("%b %e at %l:%M %p") %></br></br>
 			
 				<% if current_user != nil %>
 					<% if review.user_id == current_user.id %>
