@@ -1,1 +1,9 @@
 $('#review-list').html("<%= j(render(:partial => 'displayReviews')) %>");
+
+<% if @review.errors.present? %>
+	$('#review-form-errors').html("<%= j(render(:partial => 'reviewFormErrors'))%>");
+<% else %>
+	$('#review-form-errors').html("");
+	$('#review-list').html("<%= j(render(:partial => 'displayReviews'))%>");
+	$('#new_review')[0].reset();
+<% end %>
