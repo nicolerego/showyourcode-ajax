@@ -228,11 +228,17 @@ input, textarea {
 	margin-left:-20px;
 }
 
+
+html.turbolinks-progress-bar::before {
+  background-color: #ccc !important;
+  height: 3px !important;
+}
+
 /*============== SIGNUP/LOGIN STYLING*/
 .loginSignup a {
 	padding:5px 7px;
 	margin-right:5px;
-	background-color: orange;
+	background-color: #f1b601;
 	text-decoration: none;
 	color: #fff;
 	font-weight: 300;
